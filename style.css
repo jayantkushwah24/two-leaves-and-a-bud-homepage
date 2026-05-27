@@ -10,7 +10,6 @@ body {
 }
 main {
   width: 100%;
-  height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -103,7 +102,7 @@ nav .nav-right .redirect:hover {
   background-position-y: 10%;
   background-repeat: no-repeat;
   position: relative;
-  bottom: 5rem;
+  bottom: 6rem;
   border-bottom: 1px solid black;
 }
 .hero-section .text {
@@ -207,7 +206,7 @@ nav .nav-right .redirect:hover {
   }
 }
 .best-sellers {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -282,4 +281,106 @@ nav .nav-right .redirect:hover {
   font-family: var(--textFont);
   color: darkslategray;
   font-size: 0.9rem;
+}
+.best-sellers-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.best-sellers-btn button {
+  background-color: var(--btnColor);
+  color: white;
+  padding: 0.9rem 4rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: var(--textFont);
+  font-size: 1.1rem;
+  margin: 5rem 0;
+}
+.best-sellers-btn button:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* discover section */
+.discover-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 120vh;
+}
+.discover-section .content {
+  width: 60vw;
+}
+.discover-section .content .heading {
+  display: flex;
+}
+.discover-section .content .heading p {
+  background-color: #ff7f31;
+  border: 1px solid black;
+  margin-bottom: 3rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  transform: rotate(-2deg);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: var(--secondaryFont);
+  font-weight: 900;
+  letter-spacing: -3px;
+  word-spacing: -1rem;
+  margin: 3rem 0;
+}
+.discover-section .content .large-text {
+  font-size: 3.2rem;
+  font-family: var(--primaryFont);
+  font-weight: 300;
+}
+.discover-section .content input {
+  height: 5rem;
+  width: 25vw;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid black;
+  margin: 3rem 0;
+}
+.discover-section .content p {
+  font-family: var(--textFont);
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 3rem 0;
+}
+.discover-section .content .keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.discover-section .content .keywords .keyword {
+  font-size: 1.7rem;
+  font-family: var(--primaryFont);
+  font-weight: 300;
+  background-color: #daeaff;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+@media (max-width:481px) {
+  .discover-section .content .heading p{
+    font-size: 2rem;
+  }
+  .discover-section .content .large-text{
+    font-size: 1.5rem;
+  }
+  .discover-section .content input{
+    width: 70vw;
+  }
+  .discover-section .content .keywords .keyword{
+    font-size: 1rem;
+  }
 }
