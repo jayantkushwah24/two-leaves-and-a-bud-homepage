@@ -5,18 +5,17 @@
 }
 html,
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 main {
   width: 100%;
   position: relative;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
-
 :root {
   --primaryFont: "Noto Serif Georgian", serif;
   --secondaryFont: "Roboto Mono", monospace;
@@ -96,7 +95,7 @@ nav .nav-right .redirect:hover {
   background-color: #00a2d9;
   color: white;
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   background-image: url("https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=720");
   background-size: 70%;
   background-position-x: right;
@@ -206,23 +205,43 @@ nav .nav-right .redirect:hover {
     margin: 4rem 0;
   }
 }
-.best-sellers {
-  height: 90vh;
+section.best-sellers {
+  height: 75vh;
   width: 100vw;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding: 3rem;
-  overflow-x: scroll;
+  position: relative;
 }
 .best-sellers .product-cards {
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
+  display: flex;
   gap: 1.5rem;
+  scroll-behavior: smooth;
+  overflow-x: auto;
 }
-
+.best-sellers #right-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: makes it pop out */
+}
+.best-sellers #right-arrow:hover {
+  background-color: var(--btnColor);
+  color: white;
+  cursor: pointer;
+}
 .best-sellers .product-cards .card {
-  height: 50vh;
+  min-height: 50vh;
+  min-width: 45vh;
 }
 .best-sellers .product-cards .card .color-part {
   padding: 1rem;
@@ -247,9 +266,12 @@ nav .nav-right .redirect:hover {
   border-radius: 0.5rem;
 }
 .best-sellers .product-cards .card .middle-img img {
-  transform: scale(10.1rem);
   cursor: pointer;
-  height: 40vh;
+  height: 30vh;
+  transform: scale(110%);
+}
+.best-sellers .product-cards .card .middle-img img:hover {
+  transform: scale(120%);
 }
 .best-sellers .product-cards .card .color-part .lower-part {
   display: flex;
@@ -305,7 +327,11 @@ nav .nav-right .redirect:hover {
   border: 1px solid black;
   cursor: pointer;
 }
-
+@media (max-width: 481px) {
+  .best-sellers-btn .button {
+    margin-top: -50rem;
+  }
+}
 /* discover section */
 .discover-section {
   display: flex;
@@ -393,7 +419,7 @@ nav .nav-right .redirect:hover {
 
 /* our story section */
 .our-story-section {
-  margin-top: 10rem;
+  margin-top: 15rem;
   height: 200vh;
   width: 100vw;
   background-image: url("https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=1200");
@@ -431,7 +457,7 @@ nav .nav-right .redirect:hover {
   letter-spacing: -4px;
   font-family: "Oswald", sans-serif;
   text-align: center;
-  line-height: 10rem;
+  line-height: 1;
 }
 .our-story-section .paragraph {
   color: white;
@@ -449,6 +475,7 @@ nav .nav-right .redirect:hover {
 .our-story-section .three-img img {
   height: 7rem;
 }
+
 .our-story-section .button {
   display: flex;
   justify-content: center;
@@ -473,4 +500,32 @@ nav .nav-right .redirect:hover {
   right: 0;
   top: 0;
   transform: translate(-100%, -50%);
+}
+@media (max-width: 481px) {
+  .our-story-section {
+    padding: 0;
+  }
+  .our-story-section .heading p {
+    font-size: 2rem;
+    word-spacing: normal;
+  }
+  .our-story-section .large-text {
+    font-size: 5rem;
+  }
+  .our-story-section .paragraph {
+    font-size: 1.5rem;
+  }
+  .our-story-section .three-img {
+    gap: 1rem;
+  }
+  .our-story-section .three-img img {
+    height: 5rem;
+  }
+  #farm-to-cattle {
+    height: 5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100%, -50%);
+  }
 }
