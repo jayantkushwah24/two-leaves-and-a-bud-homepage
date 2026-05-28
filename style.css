@@ -619,3 +619,61 @@ section.best-sellers {
     text-align: center;
   }
 }
+
+/* our story and whole partners */
+
+.our-cafe-wholesale-partners-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+}
+.our-cafe-wholesale-partners-section .img {
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/Our_Cafe_Wholesale_Partners.webp?v=1773753185&width=2700.0");
+  background-position-y: 70%;
+  background-position-x: center;
+  background-size: cover;
+}
+.our-cafe-wholesale-partners-section .text {
+  background-color: var(--btnColor);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  padding-left: 5rem;
+}
+.our-cafe-wholesale-partners-section .text .heading {
+  font-size: 4.5rem;
+  font-family: var(--primaryFont);
+  font-weight: 300;
+}
+.our-cafe-wholesale-partners-section .text button {
+  background-color: white;
+  color: black;
+  padding: 1rem 4rem;
+  border: 1px solid black;
+  border-radius: 10rem;
+  font-family: var(--textFont);
+  font-size: 1.1rem;
+}
+.our-cafe-wholesale-partners-section .text button:hover {
+  background-color: var(--btnColor);
+  color: white;
+}
+@media (max-width: 481px) {
+  .our-cafe-wholesale-partners-section {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .our-cafe-wholesale-partners-section .text .heading {
+    font-size: 2rem;
+  }
+  .our-cafe-wholesale-partners-section .img {
+    min-height: 50vh;
+  }
+  .our-cafe-wholesale-partners-section .text {
+    width: 100vw;
+    min-height: 50vh;
+    padding: 1rem;
+  }
+}
