@@ -906,6 +906,7 @@ section.best-sellers {
   }
   .tea-journal-section .heading {
     font-size: 1.5rem;
+    padding: 2rem;
   }
 }
 
@@ -940,7 +941,7 @@ section.best-sellers {
   font-weight: 300;
   letter-spacing: -2px;
 }
-.about-us-section .container .small-text{
+.about-us-section .container .small-text {
   display: none;
 }
 .about-us-section .container .about-us {
@@ -961,6 +962,7 @@ section.best-sellers {
   .about-us-section {
     height: 50vh;
     border: none;
+    margin-bottom: 50vh;
   }
   .about-us-section .container {
     position: relative;
@@ -985,5 +987,167 @@ section.best-sellers {
     font-size: 1.1rem;
     letter-spacing: normal;
     color: white;
+    text-align: center;
+  }
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  background-color: #c0dbff;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow: hidden;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.newsletter input {
+  padding: 1rem 3rem;
+  min-width: 280px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  font-family: var(--textFont);
+}
+.newsletter button {
+  padding: 1rem 2.5rem;
+  border: 1px solid black;
+  border-radius: 100px;
+  background-color: var(--btnColor);
+  color: white;
+  font-size: 1rem;
+  font-family: var(--textFont);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.newsletter button:hover {
+  background-color: #ffb500;
+  color: black;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.social-media a {
+  text-decoration: none;
+  color: black;
+}
+.social-media i {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.social-media i:hover {
+  background-color: white;
+  transform: translateY(-3px);
+}
+.footer-links {
+  background-color: #2a2857;
+  color: white;
+  padding: 3rem;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem;
+}
+.footer-column h4 {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-family: var(--primaryFont);
+  font-weight: 400;
+}
+.footer-column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer-column li {
+  width: fit-content;
+  color: #b0aec0;
+  font-size: 1rem;
+  font-family: var(--textFont);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.footer-column li:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20rem;
+  text-align: center;
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/footer-extended_1.png?v=1771834074");
+  background-position: center;
+  background-size: cover;
+}
+.footer-bottom img {
+  width: 100%;
+  max-width: 20rem;
+  object-fit: contain;
+}
+.footer-bottom p {
+  font-size: 0.95rem;
+  font-family: var(--textFont);
+  line-height: 1.6;
+  color: #222;
+}
+@media (max-width: 481px) {
+  .footer {
+    padding: 1rem;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .newsletter form {
+    width: 100%;
+    flex-direction: column;
+  }
+  .newsletter input {
+    width: 100%;
+  }
+  .newsletter button {
+    width: fit-content;
+  }
+  .footer-links {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 0rem;
+    border-radius: 0;
+    width: 100vw;
+  }
+  .footer-column h4 {
+    font-size: 1.1rem;
+  }
+  .footer-column li {
+    font-size: 0.95rem;
+  }
+  .footer-bottom img {
+    max-width: 320px;
   }
 }
