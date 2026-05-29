@@ -908,3 +908,82 @@ section.best-sellers {
     font-size: 1.5rem;
   }
 }
+
+/* about us section */
+
+.about-us-section {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/Two_Leaves_Tea_Aug_25_Shoot-14x_SQ_1_d549e6bb-f1ad-4b36-a851-05e1af195a31.webp?v=1771593222&width=2250.0");
+  background-size: cover;
+  background-position: center;
+  background-color: #fbdab5;
+  border: 1px solid black;
+}
+.about-us-section .container {
+  height: 80vh;
+  width: 60vh;
+  background-color: #f26412;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.about-us-section .container .large-text {
+  color: white;
+  font-family: var(--primaryFont);
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+.about-us-section .container .small-text{
+  display: none;
+}
+.about-us-section .container .about-us {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  font-family: var(--textFont);
+  font-size: 1.1rem;
+}
+.about-us-section .container .about-us:hover {
+  background-color: var(--btnColor);
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 481px) {
+  .about-us-section {
+    height: 50vh;
+    border: none;
+  }
+  .about-us-section .container {
+    position: relative;
+    top: 50vh;
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-us-section .container .large-text {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1;
+  }
+  .about-us-section .container .small-text {
+    display: inline-block;
+    font-family: var(--textFont);
+    font-size: 1.1rem;
+    letter-spacing: normal;
+    color: white;
+  }
+}
