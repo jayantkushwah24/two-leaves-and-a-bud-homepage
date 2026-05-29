@@ -23,7 +23,19 @@ main {
 }
 
 /* navbar */
-
+.offers {
+  display: flex;
+  justify-content: center;
+  background-color: var(--btnColor);
+}
+.offers p {
+  font-family: var(--secondaryFont);
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -32,7 +44,7 @@ main {
   background-color: white;
   color: black;
   border: 1px solid black;
-  margin: 2vmin;
+  margin: 1rem;
   padding: 0.5vh 1vw;
   border-radius: 1rem;
   overflow: hidden;
@@ -81,10 +93,13 @@ nav .nav-right .redirect:hover {
     display: flex;
   }
   .menu-svg i {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .navbar .nav-right div {
     display: none;
+  }
+  .offers p{
+    padding: 0.5rem;
   }
 }
 
@@ -113,7 +128,7 @@ nav .nav-right .redirect:hover {
 }
 
 .hero-section .large-text {
-  font-size: 2.9rem;
+  font-size: 3rem;
   font-family: var(--primaryFont);
   font-weight: 300;
   letter-spacing: -2px;
@@ -137,13 +152,16 @@ nav .nav-right .redirect:hover {
   color: black;
   border: 1px solid black;
 }
-@media (max-width: 400px) {
+@media (max-width: 481px) {
   .hero-section {
     background-size: contain;
     background-position: center;
   }
   .hero-section .text {
     width: 100vw;
+  }
+  .hero-section .large-text {
+    font-size: 2rem;
   }
 }
 
@@ -195,14 +213,6 @@ nav .nav-right .redirect:hover {
   font-weight: 900;
   letter-spacing: -3px;
   word-spacing: -1rem;
-}
-@media (max-width: 481px) {
-  .best-sellers-heading p {
-    font-size: 1.8rem;
-    letter-spacing: normal;
-    word-spacing: normal;
-    margin: 4rem 0;
-  }
 }
 section.best-sellers {
   height: 75vh;
@@ -327,8 +337,14 @@ section.best-sellers {
   cursor: pointer;
 }
 @media (max-width: 481px) {
-  .best-sellers-btn .button {
-    margin-top: -50rem;
+  .best-sellers-btn button {
+    margin-top: 0;
+  }
+  .best-sellers-heading p {
+    font-size: 1.8rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+    margin: 4rem 0;
   }
 }
 /* discover section */
