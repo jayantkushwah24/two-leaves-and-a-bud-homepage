@@ -22,12 +22,16 @@ main {
   --btnColor: #2a2857;
 }
 
-/* navbar */
+/* offers section */
+
 .offers {
   display: flex;
   justify-content: center;
   background-color: var(--btnColor);
+  height: max-content;
 }
+
+/* navbar */
 .offers p {
   font-family: var(--secondaryFont);
   color: white;
@@ -40,7 +44,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 4vmin);
+  width: calc(100% - 2rem);
   background-color: white;
   color: black;
   border: 1px solid black;
@@ -98,7 +102,7 @@ nav .nav-right .redirect:hover {
   .navbar .nav-right div {
     display: none;
   }
-  .offers p{
+  .offers p {
     padding: 0.5rem;
   }
 }
@@ -151,6 +155,7 @@ nav .nav-right .redirect:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
+  cursor: pointer;
 }
 @media (max-width: 481px) {
   .hero-section {
@@ -227,6 +232,7 @@ section.best-sellers {
   gap: 1.5rem;
   scroll-behavior: smooth;
   overflow-x: auto;
+  margin-left: 2rem;
 }
 #right-arrow {
   position: absolute;
@@ -338,7 +344,7 @@ section.best-sellers {
 }
 @media (max-width: 481px) {
   .best-sellers-btn button {
-    margin-top: 0;
+    margin-top: 2rem;
   }
   .best-sellers-heading p {
     font-size: 1.8rem;
@@ -677,18 +683,14 @@ section.best-sellers {
 }
 @media (max-width: 481px) {
   .our-cafe-wholesale-partners-section {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 100%;
     grid-template-rows: repeat(2, 1fr);
+    height: 100vh;
   }
   .our-cafe-wholesale-partners-section .text .heading {
     font-size: 2rem;
   }
-  .our-cafe-wholesale-partners-section .img {
-    min-height: 50vh;
-  }
   .our-cafe-wholesale-partners-section .text {
-    width: 100vw;
-    min-height: 50vh;
     padding: 1rem;
   }
 }
@@ -809,7 +811,7 @@ section.best-sellers {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     gap: 0;
-    height: 75vh;
+    height: 80vh;
   }
   .product-feature-section .full-screen-card .product-img img {
     height: 15rem;
@@ -893,6 +895,7 @@ section.best-sellers {
   transform: rotate(0deg);
   background-color: white;
   margin: 0.3rem;
+  letter-spacing: -1px;
 }
 .tea-journal-section .journal-cards .card .title {
   background-color: #c0dbff;
@@ -1080,7 +1083,7 @@ section.best-sellers {
   padding: 3rem;
   border-radius: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 2.5rem;
   margin: 3rem;
 }
